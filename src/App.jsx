@@ -78,26 +78,70 @@ function App() {
           },
         ],
       },
+      {
+        id: 3,
+        question: "Which club does the famous host of WWTBAM support?",
+        answers: [
+          {
+            text: "Manchester United",
+            correct: false,
+          },
+          {
+            text: "Arsenal",
+            correct: false,
+          },
+          {
+            text: "Chelsea",
+            correct: true,
+          },
+          {
+            text: "Barcelona",
+            correct: false,
+          },
+        ],
+      },
+      {
+        id: 3,
+        question: "Who won the 1992 World Cup?",
+        answers: [
+          {
+            text: "Germany",
+            correct: true,
+          },
+          {
+            text: "Brazil",
+            correct: false,
+          },
+          {
+            text: "Argentina",
+            correct: false,
+          },
+          {
+            text: "England",
+            correct: false,
+          },
+        ],
+      },
     ];
 
   const moneyParameter = useMemo(
     () => 
     [
-      {id: 1, amount: '#5,000'},
-      {id: 2, amount: '#7,500'},
-      {id: 3, amount: '#10,000'},
-      {id: 4, amount: '#15,000'},
-      {id: 5, amount: '#20,000'},
-      {id: 6, amount: '#30,000'},
-      {id: 7, amount: '#45,000'},
-      {id: 8, amount: '#70,000'},
-      {id: 9, amount: '#120,000'},
-      {id: 10, amount: '#250,000'},
-      {id: 11, amount: '#500,000'},
-      {id: 12, amount: '#1 Million'},
-      {id: 13, amount: '#2 Million'},
-      {id: 14, amount: '#5 Million'},
-      {id: 15, amount: '#10 Million'},
+      {id: 1, amount: '₦ 5,000'},
+      {id: 2, amount: '₦ 7,500'},
+      {id: 3, amount: '₦ 10,000'},
+      {id: 4, amount: '₦ 15,000'},
+      {id: 5, amount: '₦ 20,000'},
+      {id: 6, amount: '₦ 30,000'},
+      {id: 7, amount: '₦ 45,000'},
+      {id: 8, amount: '₦ 70,000'},
+      {id: 9, amount: '₦ 120,000'},
+      {id: 10, amount: '₦ 250,000'},
+      {id: 11, amount: '₦ 500,000'},
+      {id: 12, amount: '₦ 1 Million'},
+      {id: 13, amount: '₦ 2 Million'},
+      {id: 14, amount: '₦ 5 Million'},
+      {id: 15, amount: '₦ 10 Million'},
     
     ].reverse(),
    []
@@ -113,7 +157,7 @@ function App() {
       ): (
         <>
           <div className="main">
-          {stop ? <h1 className="endText">You earned:{earned}</h1> : (
+          {stop ? <h1 className="endText">You just earned: {earned} <br/> <span>Thank you for Participating 😇 </span></h1>  : (
           <>
             <div className="top">
               <div className="timer">

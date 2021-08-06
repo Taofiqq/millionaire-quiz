@@ -3,10 +3,11 @@
     display: flex;
     background-color: #020230;
     color: white;
+    overflow-y:hidden;
 }
 .main{
     width: 75%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0), #020230),  url('./images/millionaire.jpg') center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), #020230),  url('./images/millionaire.jpg') center;
     display: flex;
     flex-direction: column;
 }
@@ -48,7 +49,7 @@
     width:40%;
     padding:10px;
     text-align: center;
-    background: linear-gradient(#0e0124, #220740);
+    background: linear-gradient(#100241, black);
     border: 1px solid white;
     font-size: 20px;
     font-weight: 200;
@@ -57,7 +58,7 @@
     cursor: pointer;
 }
 .answer:hover, .answer.active {
-    background: mediumblue;
+    background: #1A1A1B;
 }
 .answer.correct {
     animation: correct 1s ease forwards;
@@ -66,7 +67,7 @@
 
 @keyframes correct {
     0%,22%, 42% {
-        background: mediumblue;
+        background: #FFD700;
     }
     20%, 40%,60% {
         background: linear-gradient(#0e0124, #220740); 
@@ -81,7 +82,7 @@
 
 @keyframes wrong {
     0%,22%, 42% {
-        background: mediumblue;
+        background: #FFD700;
     }
     20%, 40%,60% {
         background: linear-gradient(#0e0124, #220740); 
@@ -92,11 +93,11 @@
 }
 .question {
     width: 80%;
-    border: 2px solid black;
+    border: 2px solid white;
     background: linear-gradient(#100241, black);
     text-align: center;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 20px;
+    border-radius: 14px;
     font-size:15px;
 
 }
@@ -118,7 +119,8 @@
     align-items: center;
 }
 .moneyListItem.active {
-    background-color: orangered;
+    background-color: #FFA900;
+    width: 75%;
     padding: 2px;
     border-radius:7px;
 }
@@ -126,7 +128,7 @@
 .moneyListItemNumber {
     font-size: 18px;
     font-weight: 100;
-    width: 30%;
+    width: 10%;
 }
 .moneyListItemAmount {
     font-size: 20px;
@@ -143,35 +145,133 @@
 }
 
 .start {
-    width: 250px;
+    width: 450px;
     height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    top: 0;
+    top: -10rem;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
 }
+.startImg {
+    margin-bottom:.5rem;
+}
+.startHeader {
+    font-size: 20px;
+    margin-bottom:2rem;
+    text-align: center;
+}
+h5 {
+    margin-bottom:1rem;
+    font-size: 15px;
+}
 .startInput {
-    width: 100%;
+    width: 70%;
     height: 30px;
     border: none;
     text-align:center;
     font-size:18px;
     border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: .7rem 0;
 }
 
 .startInput:focus {
     outline: none
 }
 .startButton {
-    width: 100%;
-    height: 30px;
+    width: 40%;
+    height: 40px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
+    padding:.5rem;
+}
+h1 span {
+    color: #F8485E;
+}
+
+@media only screen and (max-width:768px) {
+    .moneyListItemNumber {
+        font-size: 14px;
+        font-weight: 100;
+        width: 20%;
+    }
+    .moneyListItemAmount {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+}
+@media only screen and (max-width:560px) {
+    .timer {
+        bottom: 80px;
+        left:60px;
+    }
+    .question {
+        padding: 10px;
+        font-size: 13px;
+        margin-bottom: .5rem;
+    }
+    .endText {
+        font-size: 17px;
+    }
+    .moneyListItemNumber {
+        font-size: 11px;
+        font-weight: 100;
+        width: 20%;
+    }
+    .moneyListItemAmount {
+        font-size: 11px;
+        font-weight: 400;
+    }
+    .moneyList {
+        padding: 10px;
+    }
+}
+@media only screen and (max-width:399px) {
+    .answer {
+        font-size: 10px;
+    }
+    .timer {
+        bottom: 80px;
+        left:60px;
+    }
+    .question {
+        padding: 10px;
+        font-size: 13px;
+        margin-bottom: .5rem;
+    }
+    .endText {
+        font-size: 13px;
+    }
+    .moneyListItemNumber {
+        font-size: 9px;
+        font-weight: 100;
+        width: 20%;
+    }
+    .moneyListItemAmount {
+        font-size: 9px;
+        font-weight: 400;
+    }
+    .moneyList {
+        padding: 10px;
+    }
+    .startHeader {
+        font-size: 9px;
+    }
+    h5 {
+        font-size:11px;
+    }
+    .startInput {
+        font-size:12px;
+    }
+    .startButton {
+        font-size: 13px;
+    }
 }
