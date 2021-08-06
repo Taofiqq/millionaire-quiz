@@ -233,6 +233,9 @@ h1 span {
     .moneyList {
         padding: 10px;
     }
+    .answer:hover, .answer.active {
+        background: linear-gradient(#100241, black);
+    }
 }
 @media only screen and (max-width:399px) {
     .answer {
